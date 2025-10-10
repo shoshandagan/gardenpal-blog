@@ -64,7 +64,7 @@ export default async function BlogPage() {
               Featured Posts
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              {featuredPosts.map((post: { _id: string; title: string; slug: { current: string }; excerpt?: string; mainImage?: any; publishedAt: string; author?: { name: string; image?: any }; categories?: Array<{ title: string; slug: { current: string }; color?: string }> }) => (
+              {featuredPosts.map((post: { _id: string; title: string; slug: { current: string }; excerpt?: string; mainImage?: unknown; publishedAt: string; author?: { name: string; image?: unknown }; categories?: Array<{ title: string; slug: { current: string }; color?: string }> }) => (
                 <PostCard
                   key={post._id}
                   title={post.title}
@@ -90,7 +90,7 @@ export default async function BlogPage() {
           
           {posts && posts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.map((post: { _id: string; title: string; slug: { current: string }; excerpt?: string; mainImage?: any; publishedAt: string; author?: { name: string; image?: any }; categories?: Array<{ title: string; slug: { current: string }; color?: string }> }) => (
+              {posts.map((post: { _id: string; title: string; slug: { current: string }; excerpt?: string; mainImage?: unknown; publishedAt: string; author?: { name: string; image?: unknown }; categories?: Array<{ title: string; slug: { current: string }; color?: string }> }) => (
                 <PostCard
                   key={post._id}
                   title={post.title}

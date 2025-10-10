@@ -175,7 +175,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               Recommended Products
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {post.affiliateProducts.map((product: { _id: string; name: string; description: string; image: any; price: string; amazonLink: string }) => (
+              {post.affiliateProducts.map((product: { _id: string; name: string; description: string; image: unknown; price: string; amazonLink: string }) => (
                 <AffiliateCard
                   key={product._id}
                   id={product._id}
