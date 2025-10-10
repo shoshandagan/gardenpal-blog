@@ -177,7 +177,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               Recommended Products
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {post.affiliateProducts.map((product: { _id: string; name: string; description: string; image: any; price: string; amazonLink: string }) => ( // eslint-disable-line @typescript-eslint/no-explicit-any
+              {post.affiliateProducts.map((product: { _id: string; name: string; description: string; image: any; price: string; amazonLink: string; affiliateLink: string; platform: string; rating?: number }) => ( // eslint-disable-line @typescript-eslint/no-explicit-any
                 <AffiliateCard
                   key={product._id}
                   id={product._id}
@@ -188,7 +188,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   affiliateLink={product.affiliateLink}
                   platform={product.platform}
                   rating={product.rating}
-                  postSlug={params.slug}
+                  postSlug={slug}
                 />
               ))}
             </div>
