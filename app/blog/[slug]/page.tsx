@@ -6,7 +6,7 @@ import { AffiliateDisclosure } from '@/components/blog/AffiliateDisclosure'
 import Image from 'next/image'
 import Link from 'next/link'
 import { format } from 'date-fns'
-import { ArrowLeft, Calendar, Clock, User } from 'lucide-react'
+import { ArrowLeft, Calendar, User } from 'lucide-react'
 import { urlForImage } from '@/lib/sanity/image'
 import type { Metadata } from 'next'
 
@@ -99,7 +99,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         {/* Categories */}
         {post.categories && post.categories.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-6">
-            {post.categories.map((category: any) => (
+            {post.categories.map((category: { slug: { current: string }; title: string; color?: string }) => (
               <span
                 key={category.slug.current}
                 className="inline-block px-3 py-1 text-sm font-medium rounded-full"
@@ -175,7 +175,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               Recommended Products
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {post.affiliateProducts.map((product: any) => (
+              {post.affiliateProducts.map((product: { _id: string; name: string; description: string; image: any; price: string; amazonLink: string }) => (
                 <AffiliateCard
                   key={product._id}
                   id={product._id}

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { format } from 'date-fns'
-import { Calendar, Clock, User } from 'lucide-react'
+import { Calendar, User } from 'lucide-react'
 import { urlForImage } from '@/lib/sanity/image'
 import type { Image as SanityImage } from 'sanity'
 
