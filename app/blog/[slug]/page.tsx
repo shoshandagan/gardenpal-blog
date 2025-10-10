@@ -81,7 +81,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     )
   }
 
-  const imageUrl = post.mainImage ? urlForImage(post.mainImage)?.width(1200).height(600).url() : null
+  const imageUrl = post.mainImage ? urlForImage(post.mainImage)?.width(1200).height(600).url() || null : null
   const formattedDate = format(new Date(post.publishedAt), 'MMMM dd, yyyy')
   const hasAffiliateProducts = post.affiliateProducts && post.affiliateProducts.length > 0
 
