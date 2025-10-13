@@ -5,8 +5,8 @@ import { schemaTypes } from './sanity/schemas'
 export default defineConfig({
   name: 'gardenpal-blog-studio',
   title: 'GardenPal Blog Studio',
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
+  projectId: '80etgf14',
+  dataset: 'production',
   basePath: '/studio',
   plugins: [structureTool()],
   schema: {
