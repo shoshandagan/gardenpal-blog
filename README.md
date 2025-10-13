@@ -2,6 +2,8 @@
 
 A high-performance, SEO-optimized blog built with Next.js 15, Sanity CMS, and Supabase analytics. Designed specifically for the GardenPal gardening app.
 
+<!-- Updated to trigger new deployment -->
+
 ## 🌟 Features
 
 - ✅ **SEO Optimized** - Server-side rendering with Next.js App Router
