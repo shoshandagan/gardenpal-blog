@@ -33,7 +33,7 @@ export function PostCard({
   categories,
   featured = false,
 }: PostCardProps) {
-  const imageUrl = mainImage && mainImage.asset ? urlForImage(mainImage)?.width(600).height(400).url() || null : null
+  const imageUrl = mainImage ? urlForImage(mainImage)?.width(600).height(400).url() || null : null
   const formattedDate = format(new Date(publishedAt), 'MMM dd, yyyy')
 
   return (
