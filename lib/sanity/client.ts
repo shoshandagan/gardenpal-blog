@@ -1,21 +1,7 @@
 import { createClient } from 'next-sanity'
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
-
-if (!projectId) {
-  throw new Error(
-    'Missing NEXT_PUBLIC_SANITY_PROJECT_ID environment variable. ' +
-    'Please add it to your Vercel project settings or .env.local file.'
-  )
-}
-
-if (!dataset) {
-  throw new Error(
-    'Missing NEXT_PUBLIC_SANITY_DATASET environment variable. ' +
-    'Please add it to your Vercel project settings or .env.local file.'
-  )
-}
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '80etgf14'
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 
 export const client = createClient({
   projectId,
