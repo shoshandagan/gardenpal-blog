@@ -18,6 +18,11 @@ export interface PageView {
  * Track affiliate link click
  */
 export async function trackAffiliateClick(click: AffiliateClick) {
+  if (!supabase) {
+    console.warn('Supabase not configured - skipping affiliate click tracking')
+    return { success: false, error: 'Supabase not configured' }
+  }
+
   try {
     const { error } = await supabase.from('affiliate_clicks').insert([
       {
@@ -42,6 +47,11 @@ export async function trackAffiliateClick(click: AffiliateClick) {
  * Track page view
  */
 export async function trackPageView(view: PageView) {
+  if (!supabase) {
+    console.warn('Supabase not configured - skipping page view tracking')
+    return { success: false, error: 'Supabase not configured' }
+  }
+
   try {
     const { error } = await supabase.from('page_views').insert([
       {
@@ -66,6 +76,11 @@ export async function trackPageView(view: PageView) {
  * Get affiliate click stats for a product
  */
 export async function getProductClickStats(productId: string) {
+  if (!supabase) {
+    console.warn('Supabase not configured - returning zero clicks')
+    return { clicks: 0, error: 'Supabase not configured' }
+  }
+
   try {
     const { data, error, count } = await supabase
       .from('affiliate_clicks')
