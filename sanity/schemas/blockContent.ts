@@ -15,6 +15,9 @@ export const blockContent = defineType({
         { title: 'H3', value: 'h3' },
         { title: 'H4', value: 'h4' },
         { title: 'Quote', value: 'blockquote' },
+        { title: 'Small Text', value: 'small' },
+        { title: 'Large Text', value: 'large' },
+        { title: 'Lead Text', value: 'lead' },
       ],
       lists: [
         { title: 'Bullet', value: 'bullet' },
@@ -27,6 +30,8 @@ export const blockContent = defineType({
           { title: 'Underline', value: 'underline' },
           { title: 'Strike', value: 'strike-through' },
           { title: 'Code', value: 'code' },
+          { title: 'Small', value: 'small' },
+          { title: 'Large', value: 'large' },
         ],
         annotations: [
           {

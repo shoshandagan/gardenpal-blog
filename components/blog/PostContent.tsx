@@ -66,6 +66,15 @@ const components: PortableTextComponents = {
     normal: ({ children }) => (
       <p className="text-gray-700 leading-relaxed mb-4">{children}</p>
     ),
+    small: ({ children }) => (
+      <p className="text-sm text-gray-600 leading-relaxed mb-3">{children}</p>
+    ),
+    large: ({ children }) => (
+      <p className="text-lg text-gray-800 leading-relaxed mb-4">{children}</p>
+    ),
+    lead: ({ children }) => (
+      <p className="text-xl text-gray-800 leading-relaxed mb-6 font-medium">{children}</p>
+    ),
   },
   list: {
     bullet: ({ children }) => (
@@ -89,6 +98,8 @@ const components: PortableTextComponents = {
         {children}
       </code>
     ),
+    small: ({ children }) => <span className="text-sm text-gray-600">{children}</span>,
+    large: ({ children }) => <span className="text-lg text-gray-900">{children}</span>,
     link: ({ value, children }) => {
       const target = value?.blank ? '_blank' : undefined
       const rel = value?.blank ? 'noopener noreferrer' : undefined
