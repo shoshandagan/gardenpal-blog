@@ -162,8 +162,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         )}
 
-        {/* Affiliate Disclosure */}
-        {hasAffiliateProducts && <AffiliateDisclosure />}
+        {/* Affiliate Disclosure - Removed automatic disclosure to prevent duplicates */}
 
         {/* Post Content */}
         <div className="prose prose-lg max-w-none mb-12">
