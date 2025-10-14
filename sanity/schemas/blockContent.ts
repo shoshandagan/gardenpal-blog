@@ -15,9 +15,9 @@ export const blockContent = defineType({
         { title: 'H3', value: 'h3' },
         { title: 'H4', value: 'h4' },
         { title: 'Quote', value: 'blockquote' },
-        { title: 'Small Text', value: 'small' },
-        { title: 'Large Text', value: 'large' },
-        { title: 'Lead Text', value: 'lead' },
+        { title: 'Small Text', value: 'smallText' },
+        { title: 'Large Text', value: 'largeText' },
+        { title: 'Lead Text', value: 'leadText' },
       ],
       lists: [
         { title: 'Bullet', value: 'bullet' },

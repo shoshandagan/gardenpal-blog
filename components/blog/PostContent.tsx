@@ -66,13 +66,13 @@ const components: PortableTextComponents = {
     normal: ({ children }) => (
       <p className="text-gray-700 leading-relaxed mb-4">{children}</p>
     ),
-    small: ({ children }) => (
+    smallText: ({ children }) => (
       <p className="text-sm text-gray-600 leading-relaxed mb-3">{children}</p>
     ),
-    large: ({ children }) => (
+    largeText: ({ children }) => (
       <p className="text-lg text-gray-800 leading-relaxed mb-4">{children}</p>
     ),
-    lead: ({ children }) => (
+    leadText: ({ children }) => (
       <p className="text-xl text-gray-800 leading-relaxed mb-6 font-medium">{children}</p>
     ),
   },
