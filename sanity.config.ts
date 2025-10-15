@@ -4,7 +4,7 @@ import { schemaTypes } from './sanity/schemas'
 
 export default defineConfig({
   name: 'gardenpal-blog-studio',
-  title: 'GardenPal Blog Studio',
+  title: 'GardenPal Blog Studio v2.0',
   projectId: '80etgf14',
   dataset: 'production',
   basePath: '/studio',
