@@ -114,6 +114,13 @@ export const post = defineType({
       description: 'Display this post prominently on the homepage',
       initialValue: false,
     }),
+    defineField({
+      name: 'isDraft',
+      title: 'Draft Status',
+      type: 'boolean',
+      description: 'Mark as draft to hide from public blog',
+      initialValue: false,
+    }),
   ],
 
   preview: {

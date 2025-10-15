@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity'
 
 // Get all posts with author and category data
-export const postsQuery = groq`*[_type == "post" && defined(slug.current)] | order(publishedAt desc) {
+export const postsQuery = groq`*[_type == "post" && defined(slug.current) && !isDraft] | order(publishedAt desc) {
   _id,
   title,
   slug,
@@ -14,7 +14,7 @@ export const postsQuery = groq`*[_type == "post" && defined(slug.current)] | ord
 }`
 
 // Get a single post by its slug
-export const postQuery = groq`*[_type == "post" && slug.current == $slug][0] {
+export const postQuery = groq`*[_type == "post" && slug.current == $slug && !isDraft][0] {
   _id,
   title,
   slug,
