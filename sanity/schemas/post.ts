@@ -100,11 +100,13 @@ export const post = defineType({
           name: 'keywords',
           title: 'SEO Keywords',
           type: 'array',
-          of: [{ type: 'string' }],
-          description: 'Add 5-10 keywords. Type a keyword and press Enter to add it. Click the X to remove.',
-          options: {
-            layout: 'tags',
-          },
+          of: [
+            {
+              type: 'string',
+              validation: (Rule) => Rule.required().min(2).max(50),
+            }
+          ],
+          description: 'Add 5-10 keywords for SEO. Click "Add item" button, type keyword, then click outside the field to save each one.',
           validation: (Rule) => Rule.max(15).warning('Try to keep keywords under 15 for best SEO'),
         },
       ],
